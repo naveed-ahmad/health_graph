@@ -26,6 +26,10 @@ For more information on authentication & authorization, see http://developer.run
   sleep = user.sleep.items
   weight = user.weight.items
 
+=== Fetching activity summary
+  user = HealthGraph::User.new(access_token)
+  user.fitness_activity_summary('uri' => 'uri-of-activity').detail
+
 === Other Configuration options
 
   HealthGraph.configure do |config|
