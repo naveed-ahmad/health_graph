@@ -46,5 +46,10 @@ module HealthGraph
     def strength_training_activities params = {}
       HealthGraph::StrengthTrainingActivitiesFeed.new self.access_token, self.body["strength_training_activities"], params
     end
+
+    def fitness_activity_summary params = {}
+      HealthGraph::FitnessActivitySummary.new self.access_token, params
+    end
+
   end
 end
