@@ -29,6 +29,14 @@ fitness_activities = user.fitness_activities.items
 sleep = user.sleep.items
 weight = user.weight.items
 ```
+
+### Fetching activity summary
+
+```ruby
+user = HealthGraph::User.new(access_token)
+user.fitness_activity_summary('uri' => 'uri-of-activity').detail
+```
+  
 ### Other Configuration options
 
 ```ruby
