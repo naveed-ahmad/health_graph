@@ -1,3 +1,6 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'simplecov'
 SimpleCov.start
 
@@ -11,14 +14,14 @@ require 'health_graph'
 
 class Test::Unit::TestCase
   TEST_USER_TOKEN = "b9aaf2581480432a939a72f894bf".freeze
-  
+
   def fixture(file)
     path = File.expand_path("../fixtures", __FILE__)
     File.new(path + '/' + file)
   end
-  
+
   def json_fixture(file)
     file = fixture(file)
-    JSON.load(file)    
+    JSON.load(file)
   end
 end

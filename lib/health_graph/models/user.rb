@@ -18,9 +18,21 @@ module HealthGraph
     def settings
       HealthGraph::Settings.new self.access_token, self.body["settings"]
     end
+
+    def nutrition(params={})
+      HealthGraph::NutritionFeed.new self.access_token, self.body["nutrition"], params
+    end
+
+    def background_activities(params={})
+      HealthGraph::BackgroundActivitiesFeed.new self.access_token, self.body["background_activities"], params
+    end
     
     def weight
       HealthGraph::WeightFeed.new self.access_token, self.body["weight"]
+    end
+
+    def general_measurements
+      HealthGraph::GeneralMeasurementFeed.new self.access_token, self.body["general_measurements"]
     end
     
     def sleep

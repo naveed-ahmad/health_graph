@@ -1,0 +1,16 @@
+language: ruby
+gemfile:
+   - test/support/Gemfile
+rvm:
+  - 1.9.2
+  - 1.9.3
+  - 2.0.0
+script: 
+  - bundle install
+  - bundle exec rake test
+notifications:
+  email:
+    recipients:
+      - chris@wideeyelabs.com
+    on_success: change
+    on_failure: always

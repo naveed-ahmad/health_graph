@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestWeightFeed < Test::Unit::TestCase   
+class TestWeightFeed < Minitest::Test
     context "weight" do 
       setup do
         stub_request(:get, HealthGraph.endpoint + '/user'

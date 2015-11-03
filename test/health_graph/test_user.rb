@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestUser < Test::Unit::TestCase  
+class TestUser < Minitest::Test
     context "user" do 
       setup do
         stub_request(:get, HealthGraph.endpoint + '/user'

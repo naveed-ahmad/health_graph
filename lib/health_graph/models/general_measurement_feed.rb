@@ -1,5 +1,5 @@
 module HealthGraph
-  class WeightFeed
+  class GeneralMeasurementFeed
     include Model              
     
     hash_attr_accessor :items, :next
@@ -7,7 +7,7 @@ module HealthGraph
     class Item 
       include Model      
       
-      hash_attr_accessor :timestamp, :weight, :free_mass, :mass_weight, :fat_percent, :bmi, :uri
+      hash_attr_accessor :timestamp, :systolic, :diastolic
       
       def initialize(hash) 
         populate_from_hash! hash
@@ -16,7 +16,7 @@ module HealthGraph
                       
     def initialize(access_token, path)            
       self.access_token = access_token
-      response = get path, HealthGraph.accept_headers[:weight_feed]
+      response = get path, HealthGraph.accept_headers[:general_measurement_feed]
       self.body = response.body
       populate_from_hash! self.body                  
     end                           

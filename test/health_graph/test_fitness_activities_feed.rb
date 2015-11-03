@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestFitnessActivitiesFeed < Test::Unit::TestCase   
+class TestFitnessActivitiesFeed < Minitest::Test
     context "fitness activities" do 
       setup do
         stub_request(:get, HealthGraph.endpoint + '/user'

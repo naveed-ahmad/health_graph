@@ -1,6 +1,6 @@
 require 'helper'
 
-class TestSleepFeed < Test::Unit::TestCase   
+class TestSleepFeed < Minitest::Test
     context "sleep" do 
       setup do
         stub_request(:get, HealthGraph.endpoint + '/user'
