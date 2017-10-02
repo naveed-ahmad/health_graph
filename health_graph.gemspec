@@ -80,7 +80,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<simplecov>, [">= 0"])
       s.add_dependency(%q<jeweler>, [">= 0"])
-      s.add_dependency(%q<oauth2>, [">= 0.5.2"])
+      s.add_dependency(%q<oauth2>, [">= 1.4.0"])
       s.add_dependency(%q<faraday>, [">= 0.7.4"])
       s.add_dependency(%q<faraday_middleware>, [">= 0.7.8"])
       s.add_dependency(%q<hashie>, [">= 1.2"])
