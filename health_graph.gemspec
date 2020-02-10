@@ -13,22 +13,22 @@ Gem::Specification.new do |spec|
   spec.summary = "Ruby gem for RunKeeper Health Graph API"
   spec.homepage = "http://github.com/kennyma/health_graph"
   spec.licenses = ["MIT"]
-  
+
   spec.extra_rdoc_files = [
-    "LICENSE.txt",
-    "README.rdoc"
+      "LICENSE.txt",
+      "README.rdoc"
   ]
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
-  
+
   spec.add_dependency "oauth2", ">= 1.4.0"
-  spec.add_dependency "faraday", ">= 0.7.4"
-  spec.add_dependency "faraday_middleware", ">= 0.7.8"
-  spec.add_dependency "hashie", ">= 3.4.6"
+  spec.add_dependency "faraday", "~> 1.0.0"
+  spec.add_dependency "faraday_middleware", "~> 0.14.0"
+  spec.add_dependency "hashie", ">= 1.2"
   spec.add_dependency "webmock", ">= 1.7.6"
-  
+
   spec.add_development_dependency "shoulda"
   spec.add_development_dependency "simplecov"
   spec.add_development_dependency "pry"

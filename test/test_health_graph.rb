@@ -1,6 +1,6 @@
-require 'helper'
+require_relative 'helper'
 
-class TestHealthGraph < Minitest::Test
+class TestHealthGraph < Test::Unit::TestCase
   context "Health Graph" do
     setup do
       HealthGraph.reset
@@ -88,27 +88,27 @@ class TestHealthGraph < Minitest::Test
 
     should "get default accept headers" do
       options = {
-        :user => "application/vnd.com.runkeeper.User+json",
-        :fitness_activity_feed => "application/vnd.com.runkeeper.FitnessActivityFeed+json",
-        :fitness_activity => "application/vnd.com.runkeeper.FitnessActivity+json",
-        :new_fitness_activity => "application/vnd.com.runkeeper.NewFitnessActivity+json",
-        :strength_training_activity_feed => "application/vnd.com.runkeeper.StrengthTrainingActivityFeed+json",
-        :strength_training_activity => "application/vnd.com.runkeeper.StrengthTrainingActivity+json",
-        :background_activity_feed => "application/vnd.com.runkeeper.BackgroundActivityFeed+json",
-        :background_activity => "application/vnd.com.runkeeper.BackgroundActivity+json",
-        :sleep_feed => "application/vnd.com.runkeeper.SleepFeed+json",
-        :sleep => "application/vnd.com.runkeeper.Sleep+json",
-        :nutrition_feed => "application/vnd.com.runkeeper.NutritionFeed+json",
-        :nutrition => "application/vnd.com.runkeeper.Nutrition+json",
-        :weight_feed => "application/vnd.com.runkeeper.WeightFeed+json",
-        :weight => "application/vnd.com.runkeeper.Weight+json",
-        :general_measurement_feed => "application/vnd.com.runkeeper.GeneralMeasurementFeed+json",
-        :general_measurement => "application/vnd.com.runkeeper.GeneralMeasurement+json",
-        :diabetes_feed => "application/vnd.com.runkeeper.DiabetesFeed+json",
-        :diatetes_measurement => "application/vnd.com.runkeeper.DiabetesMeasurement+json",
-        :records => "application/vnd.com.runkeeper.Records+json",
-        :profile => "application/vnd.com.runkeeper.Profile+json",
-        :settings=>"application/vnd.com.runkeeper.Settings+json"
+          :user => "application/vnd.com.runkeeper.User+json",
+          :fitness_activity_feed => "application/vnd.com.runkeeper.FitnessActivityFeed+json",
+          :fitness_activity => "application/vnd.com.runkeeper.FitnessActivity+json",
+          :new_fitness_activity => "application/vnd.com.runkeeper.NewFitnessActivity+json",
+          :strength_training_activity_feed => "application/vnd.com.runkeeper.StrengthTrainingActivityFeed+json",
+          :strength_training_activity => "application/vnd.com.runkeeper.StrengthTrainingActivity+json",
+          :background_activity_feed => "application/vnd.com.runkeeper.BackgroundActivityFeed+json",
+          :background_activity => "application/vnd.com.runkeeper.BackgroundActivity+json",
+          :sleep_feed => "application/vnd.com.runkeeper.SleepFeed+json",
+          :sleep => "application/vnd.com.runkeeper.Sleep+json",
+          :nutrition_feed => "application/vnd.com.runkeeper.NutritionFeed+json",
+          :nutrition => "application/vnd.com.runkeeper.Nutrition+json",
+          :weight_feed => "application/vnd.com.runkeeper.WeightFeed+json",
+          :weight => "application/vnd.com.runkeeper.Weight+json",
+          :general_measurement_feed => "application/vnd.com.runkeeper.GeneralMeasurementFeed+json",
+          :general_measurement => "application/vnd.com.runkeeper.GeneralMeasurement+json",
+          :diabetes_feed => "application/vnd.com.runkeeper.DiabetesFeed+json",
+          :diatetes_measurement => "application/vnd.com.runkeeper.DiabetesMeasurement+json",
+          :records => "application/vnd.com.runkeeper.Records+json",
+          :profile => "application/vnd.com.runkeeper.Profile+json",
+          :settings=>"application/vnd.com.runkeeper.Settings+json"
       }
 
       assert_equal options, HealthGraph.accept_headers
@@ -116,8 +116,8 @@ class TestHealthGraph < Minitest::Test
 
     should "set accept headers" do
       options = {
-        :user => "application/vnd.com.runkeeper.User+json",
-        :fitness_activity_feed => "application/vnd.com.runkeeper.FitnessActivityFeed+json",
+          :user => "application/vnd.com.runkeeper.User+json",
+          :fitness_activity_feed => "application/vnd.com.runkeeper.FitnessActivityFeed+json",
       }
 
       HealthGraph.accept_headers = options
